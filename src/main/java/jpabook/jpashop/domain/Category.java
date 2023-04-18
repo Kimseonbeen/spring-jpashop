@@ -25,7 +25,6 @@ public class Category {
      * ManyToMany
      * 다 대 다 관계에서는 중간 테이블이 필요하므로
      * @JoinTable 어노테이션을 사용하여 category_item Table 맵핑
-     *
      */
     @ManyToMany
     @JoinTable(name = "category_item",
