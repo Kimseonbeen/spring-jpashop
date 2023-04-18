@@ -2,10 +2,13 @@ package jpabook.jpashop.domain;
 
 
 import jakarta.persistence.Embeddable;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Embeddable
 @Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Address {  // 값 타입
 
     private String city;
@@ -24,8 +27,14 @@ public class Address {  // 값 타입
      */
 
     // 기본 생성자를 protected로 설정하여 new 생성을 막음
+
+    /**
+     * @NoArgsConstructor(access = AccessLevel.PROTECTED) 사용
+     */
+/*
     protected Address() {
     }
+*/
 
     // 생성자에서 값을 모두 초기화해서 변경 불가능한 클래스를 만들자
     public Address(String city, String street, String zipcode) {
