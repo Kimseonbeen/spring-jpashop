@@ -9,6 +9,11 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * 상속관계 매핑
+ * 단일 테이블 전략 사용
+ */
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "dtype")
